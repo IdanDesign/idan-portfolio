@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Idan Morhaim | Graphic Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EFE7;--sand:#E9DCC6;--card:#fff;--ink:#161616;--muted:#6B6762;--line:#E2D8C8;--acc:#A9864F;--acc2:#C9A66B;--dark:#1C1A17}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding-left:32px;padding-right:32px}
+header{position:sticky;top:0;z-index:30;background:rgba(244,239,231,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:700;letter-spacing:.02em;font-size:18px}.logo span{color:var(--acc)}
+.nav ul{display:flex;gap:32px;list-style:none;font-size:14px;font-weight:500}.nav ul a{color:var(--muted)}.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-size:14px;font-weight:600;border:1.5px solid var(--ink);transition:.2s;white-space:nowrap}
+.btn.solid{background:var(--acc);border-color:var(--acc);color:#fff}.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}.nav .btn{padding:10px 20px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
+h1{font-size:76px;line-height:1.05;font-weight:700;letter-spacing:-.02em;margin-bottom:22px}h1 em{font-style:normal;color:var(--acc)}
+h2{font-size:44px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
+.heroBg{background:radial-gradient(900px 500px at 85% 30%,#E6D3B3 0%,rgba(244,239,231,0) 70%),var(--bg)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:88px;padding-bottom:72px}
+.lead{font-size:19px;color:var(--muted);max-width:520px;margin-bottom:34px}.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.portrait{aspect-ratio:1/1;border-radius:28px;background:linear-gradient(150deg,#EADBC2,#C9AE82);box-shadow:0 30px 60px -30px rgba(120,90,40,.45);display:grid;place-items:center;overflow:hidden}.portrait img{width:88%}
+.band{background:var(--dark)}.services{display:grid;grid-template-columns:repeat(4,1fr)}
+.services div{padding:26px 22px;font-size:15px;font-weight:500;color:#F4EFE7;border-right:1px solid #34302A}.services div:last-child{border-right:0}
+.services small{display:block;color:var(--acc2);font-weight:600;font-size:12px;margin-bottom:4px}
+section{padding:96px 0}
+#work{background:var(--dark);color:#F4EFE7;padding-bottom:110px}#work h2{color:#fff}#work .eyebrow{color:var(--acc2)}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:24px 0 34px}
+.tabs button{font:500 14px Poppins;white-space:nowrap;padding:11px 20px;border-radius:999px;border:1px solid #3A352E;background:transparent;color:#CFC6B8;cursor:pointer;transition:.2s}
+.tabs button:hover{border-color:var(--acc2);color:#fff}.tabs button.on{background:var(--acc2);border-color:var(--acc2);color:#1C1A17;font-weight:600}
+.tabs button i{font-style:normal;opacity:.6;margin-left:6px;font-size:12px}
+.pinfo{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}
+.pinfo h3{font-size:30px;font-weight:600;color:#fff;line-height:1.2}.pinfo p{color:#A9A193;font-size:15px;margin-top:6px}
+.ctrl{display:flex;align-items:center;gap:14px;flex-shrink:0}.ctr{font-size:14px;color:#A9A193}.ctr b{color:var(--acc2);font-weight:600}
+.arr{width:48px;height:48px;border-radius:50%;border:1px solid #4A443B;background:transparent;color:#fff;font-size:20px;cursor:pointer;transition:.2s}
+.arr:hover{background:var(--acc2);border-color:var(--acc2);color:#1C1A17}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 32px;margin:0 -32px;scroll-padding:0 32px;cursor:grab}
+.track::-webkit-scrollbar,.tabs::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(62%,720px);scroll-snap-align:start;cursor:zoom-in}.track.sq .card{flex-basis:min(40%,470px)}
+.card .im{aspect-ratio:3/2;border-radius:20px;overflow:hidden;background:#2A2722}.track.sq .card .im{aspect-ratio:1/1}.track.r43 .card .im{aspect-ratio:4/3}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s;pointer-events:none}.card:hover img{transform:scale(1.035)}
+.card figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:15px;font-weight:500;color:#EDE6DA}.card figcaption span{color:#8C8477;font-size:13px}
+.bar{height:3px;background:#34302A;border-radius:3px;margin-top:30px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc2);width:0;transition:width .3s}
+.about{background:var(--sand)}.ab-head{max-width:760px;margin-bottom:40px}.ab-head h2{font-size:48px;line-height:1.12}.ab-head h2 em{font-style:normal;color:var(--acc);display:block}
+.ab-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px;border-top:1px solid #D6C6AA;padding-top:32px}
+.ab-cols p{color:#5A5248;font-size:17px}.ab-cols b{color:var(--ink);font-weight:600}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}.skills span{padding:8px 14px;border-radius:999px;background:#fff;font-size:13px;font-weight:500}
+.contact{background:var(--dark);color:#fff;text-align:center;padding:112px 0}.contact .eyebrow{color:var(--acc2)}.contact h2{font-size:56px;margin-bottom:18px}
+.contact p{color:#A9A59E;font-size:18px;margin-bottom:34px}.contact .ctas{justify-content:center}.contact .btn.ghost{color:#fff;border-color:#fff}.contact .btn.ghost:hover{background:#fff;color:var(--ink)}
+footer{background:var(--dark);color:#77736C;font-size:13px;border-top:1px solid #2A2A2A}footer .wrap{display:flex;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+#lb{position:fixed;inset:0;background:rgba(10,10,10,.94);display:none;align-items:center;justify-content:center;z-index:60;padding:24px}#lb.on{display:flex}
+#lb img{max-width:100%;max-height:86vh;border-radius:10px}#lb b{position:absolute;top:16px;right:24px;color:#fff;font-size:32px;cursor:pointer;font-weight:400}
+#lb button{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:24px;cursor:pointer}
+#lp{left:20px}#ln{right:20px}#lc{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#ccc;font-size:14px}
+#totop{position:fixed;right:24px;bottom:24px;z-index:40;width:52px;height:52px;border-radius:50%;border:0;background:var(--acc);color:#fff;font:600 22px Poppins;cursor:pointer;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s}
+#totop.show{opacity:1;transform:none;pointer-events:auto}.mo #totop{opacity:0;pointer-events:none}#totop:hover{background:var(--ink)}
+#hb{display:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;position:relative}
+#hb i{position:absolute;left:12px;right:12px;height:2px;background:var(--ink);transition:.25s}#hb i:first-child{top:16px}#hb i:last-child{top:24px}
+.mo{overflow:hidden}.mo header{background:transparent;border-color:transparent;backdrop-filter:none}.mo .logo{color:#fff}
+.mo #hb{border-color:#fff}.mo #hb i{background:#fff}.mo #hb i:first-child{top:20px;transform:rotate(45deg)}.mo #hb i:last-child{top:20px;transform:rotate(-45deg)}
+#mm{position:fixed;inset:0;z-index:25;background:var(--dark);color:#fff;padding:96px 24px 32px;display:flex;flex-direction:column;justify-content:space-between;opacity:0;pointer-events:none;transition:.3s}
+.mo #mm{opacity:1;pointer-events:auto}
+#mm nav>a{display:block;font-size:34px;font-weight:600;padding:10px 0;border-bottom:1px solid #34302A}
+#mm .sub{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px 0 18px;border-bottom:1px solid #34302A}
+#mm .sub a{font-size:14px;color:#CFC6B8;padding:10px 12px;border:1px solid #3A352E;border-radius:12px}#mm .sub span{color:var(--acc2);margin-left:6px;font-size:12px}
+#mm .mf{display:flex;gap:10px}#mm .mf .btn{flex:1;justify-content:center}#mm .btn.ghost{color:#fff;border-color:#fff}
+@media(min-width:901px){#mm{display:none}}
+@media(max-width:900px){
+.wrap{padding-left:20px;padding-right:20px}.nav{height:64px}.nav ul,.nav>.btn{display:none}#hb{display:block}
+.hero{grid-template-columns:1fr;gap:32px;padding-top:40px;padding-bottom:48px}.portrait{order:-1;max-width:280px;width:100%;margin:0 auto;border-radius:24px}
+h1{font-size:46px}.lead{font-size:17px}.hero .ctas .btn{flex:1;justify-content:center}
+.services{grid-template-columns:1fr 1fr}.services div{padding:18px 14px;font-size:14px}.services div:nth-child(2){border-right:0}.services div:nth-child(-n+2){border-bottom:1px solid #34302A}
+section{padding:64px 0}h2{font-size:34px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;overflow:visible;margin:20px 0 28px}.tabs button{padding:12px 10px;font-size:13px;width:100%}
+.pinfo{flex-direction:column;align-items:flex-start}.pinfo h3{font-size:24px}.ctrl{width:100%;justify-content:space-between}.arr{width:42px;height:42px}
+.track{padding:0 20px;margin:0 -20px;scroll-padding:0 20px;gap:12px}.card,.track.sq .card{flex-basis:84%}.track.sq .card{flex-basis:78%}.card .im{border-radius:14px}
+.ab-head{margin-bottom:24px}.ab-head h2{font-size:29px;line-height:1.2;letter-spacing:-.025em}.ab-cols{grid-template-columns:1fr;gap:16px;padding-top:24px}.ab-cols p{font-size:16px}
+.contact{padding:80px 0}.contact h2{font-size:38px}.contact p{font-size:16px}.contact .btn{flex:1 1 100%;justify-content:center}
+footer .wrap{flex-direction:column;gap:6px;text-align:center}
+#totop{right:16px;bottom:16px;width:46px;height:46px;font-size:20px}#lb button{width:42px;height:42px;font-size:18px}#lp{left:8px}#ln{right:8px}}
+</style></head><body>
+<header><div class="wrap nav"><a href="#top" class="logo">IDAN MORHAIM<span>.</span></a>
+<ul><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn solid" href="#contact">Let's talk</a><button id="hb" aria-label="Menu"><i></i><i></i></button></div></header>
+<div id="mm"><nav><a href="#work">Work</a><div class="sub" id="msub"></div><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<div class="mf"><a class="btn solid" href="mailto:idanmor2236@gmail.com">Email me</a><a class="btn ghost" href="https://www.linkedin.com/in/idan-morhaim-722478350" target="_blank">LinkedIn ↗</a></div></div>
+<main id="top">
+<div class="heroBg"><div class="wrap hero"><div><div class="eyebrow">Graphic Designer</div><h1>Idan<br>Morhaim<em>.</em></h1>
+<p class="lead">Branding, marketing materials, product labels and user guides, designed with precision and delivered on schedule.</p>
+<div class="ctas"><a class="btn solid" href="#work">View my work →</a><a class="btn ghost" href="#contact">Contact me</a></div></div>
+<div class="portrait"><img id="pimg" alt="Idan Morhaim"></div></div></div>
+<div class="band"><div class="wrap services"><div><small>01</small>Brand identity</div><div><small>02</small>Print &amp; marketing</div><div><small>03</small>User guides &amp; illustration</div><div><small>04</small>Labels &amp; packaging</div></div></div>
+<section id="work"><div class="wrap"><div class="eyebrow">Portfolio</div><h2>Selected work</h2><div class="tabs" id="tabs"></div>
+<div class="pinfo"><div><h3 id="pt"></h3><p id="pd"></p></div><div class="ctrl"><span class="ctr" id="ctr"></span><div><button class="arr" id="prev" aria-label="Previous">←</button> <button class="arr" id="next" aria-label="Next">→</button></div></div></div>
+<div class="track" id="track"></div><div class="bar"><i id="bar"></i></div></div></section>
+<section class="about" id="about"><div class="wrap"><div class="ab-head"><div class="eyebrow">About</div><h2>Design that supports <em>business goals.</em></h2></div>
+<div class="ab-cols"><p>I'm a <b>graphic designer</b> with extensive experience in print and digital design, branding and visual concept development. I've worked with diverse clients and cross-functional teams, delivering strategic, visually compelling work across a wide range of platforms.</p>
+<p>My expertise includes <b>marketing materials</b> for digital and print, <b>brand identities</b>, and clear, user-focused visual communication. I combine strong conceptual thinking with attention to detail, so every project meets high quality standards and stays on schedule.</p></div>
+<div class="skills"><span>Branding</span><span>Print production</span><span>Technical illustration</span><span>User guides</span><span>Labels &amp; packaging</span><span>Marketing collateral</span><span>Mockups</span></div></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Contact</div><h2>Let's work together.</h2><p>Have a project or an open role? I'd love to hear about it.</p>
+<div class="ctas"><a class="btn solid" href="mailto:idanmor2236@gmail.com">idanmor2236@gmail.com</a><a class="btn ghost" href="https://www.linkedin.com/in/idan-morhaim-722478350" target="_blank">LinkedIn ↗</a></div></div></section></main>
+<footer><div class="wrap"><span>© 2026 Idan Morhaim · Graphic Designer</span><a href="#top">Back to top ↑</a></div></footer>
+<button id="totop" aria-label="Back to top">↑</button>
+<div id="lb"><b id="lx">×</b><button id="lp">←</button><img alt=""><button id="ln">→</button><div id="lc"></div></div>
+<script>
+const U=(i,e,m,w,h)=>`https://static.wixstatic.com/media/a9d377_${i}~mv2.${e}/v1/${m}/w_${w},h_${h},al_c,q_85,enc_auto/x.${e}`;
+const P=s=>s.split(' ').map(x=>x.split('.'));
+const cats=[
+{tab:'User Guides',t:'User Guides & Illustrations',d:'Instruction manuals, technical illustrations and packaging for Doona products.',sq:0,r43:1,
+ im:P('d8233f9dfc574af2af78ba424a9e7a39.png 785968386f0844859de65dabd9ae8765.png 31cad50383bf4c739ac5de3f3bf8ed25.png e58bb6f45ab94eaea49f8a3a12c3a824.png 79db5543889048a8bb2e9a16c82c3aec.png b8e8bbacc99440ac8f23d61704efc0da.png 44db85e921d848faae13eb46cd1f8fc2.png 6ea359b0b0b04ace95c46099d4378e4f.png 0566b7910469411f92cb96e53c523d4b.png'),
+ c:['Doona X · User guide','Doona X · Guide spread','Doona X · Overview','Doona X · Instructions','Doona Base · User guide','Doona Base · Guide spread','Doona Base · Instructions','Doona · Packaging','Doona · Packaging']},
+{tab:'Labels',t:'Stickers & Textile Labels',d:'Product stickers and textile labels for Doona X (US).',sq:1,
+ im:P('3df30e73d7a14cd3a74f56cd1326663c.png 364faa1ad2334a1997d58b62449fb229.png c236b76e41084411bc346db7f60e0698.png'),c:['Doona X · Stroller side','Doona X · Lay back','Doona X · Car seat']},
+{tab:'Business Cards',t:'Business Cards',d:'Card designs for law firms, salons, real estate, beauty and tech brands, including embossed finishes.',sq:0,
+ im:P('e3dac5213b0a49bfb9621b4630b52ab0.jpg 05b38cf34cc54b29b67677464d29635f.jpg bddbbb14792c43908498ca0bda5b59a6.jpg d6ed59b2e0e34af2abc08cc8e9369dce.png 21a99ef0bb1a48739497f3b6e6bb7d91.png 4e1b6f5c6fbf4b369fd17bbde289346f.png cc190a3941bd4afba6a201d658a939c7.png 3b0b44076dbc4dcca442a23da876b513.png d522e3569cfa42f59cfa2e0a7f0f24ff.png 2d9c418c572040849c6165763b0f1dd1.png 9d954c8d3abf4130a771896b6abd7284.png 55a4021dd46241118d255197e58f5c06.jpg 8df74c312c5c4572a6b404c6c934a4a4.png'),
+ c:['S-Class · Embossed card','S-Class · Embossed card','IA Law','53 Fifty Three Barber','EVRON Law','Momentum','SB Cosmetics','Josef Barbershop','Zur Mishelo','Dafna Marton Real Estate','Talsoft','FB Law','Inna Berger-Vainer · Square card']},
+{tab:'Print & Marketing',t:'Print & Marketing Materials',d:'Roll-ups, flyers, signage, menus, posters and booklets.',sq:1,
+ im:P('a53bca779336463087f8113d71c42521.png 7147f672135c4b04a5c97fbede989907.png 933af602d8934c1981bd19578c16e3db.png e1ea67108d064a78b24bb95b1cde14a9.png 510f12dc745444c496c4f6e727a8a557.png 6adfd6e918de4dbebb4c7287ba6f73b4.jpg 6215b3a3b12c4ac4a7de7227f56f7cad.jpg 49c71990bff84fa085478092190da97b.png d95af5af8a524a609e0f34e8ddc19187.png'),
+ c:['Mivne Group · Ahuza project roll-up','Physio Balance · Voucher flyer','Mayasurf · Bus-stop poster','RE/MAX · Recruitment flyers','Greeting card','Framed price list','Roll-up banners','Bat Yam Municipality · Booklet','Price list poster']}];
+const $=id=>document.getElementById(id),tr=$('track'),pad=n=>String(n).padStart(2,'0');let cur=0,li=0,moved=false;
+$('pimg').src=U('9974d3ec7aea40e1b05986094d571cc3','png','fit',900,900);
+$('tabs').innerHTML=cats.map((c,i)=>`<button data-i="${i}">${c.tab}<i>${c.im.length}</i></button>`).join('');
+$('msub').innerHTML=cats.map((c,i)=>`<a href="#work" data-i="${i}">${c.tab}<span>${c.im.length}</span></a>`).join('');
+const gap=()=>tr.children[0].offsetWidth+parseFloat(getComputedStyle(tr).gap);
+function upd(){const n=tr.children.length,idx=Math.min(n-1,Math.round(tr.scrollLeft/gap()));$('ctr').innerHTML=`<b>${pad(idx+1)}</b> / ${pad(n)}`;const max=tr.scrollWidth-tr.clientWidth;$('bar').style.width=(max>0?Math.max(8,tr.scrollLeft/max*100):100)+'%'}
+function show(i){cur=i;const c=cats[i];document.querySelectorAll('#tabs button').forEach((b,k)=>b.classList.toggle('on',k==i));$('pt').textContent=c.t;$('pd').textContent=c.d;tr.classList.toggle('sq',!!c.sq);tr.classList.toggle('r43',!!c.r43);
+ tr.innerHTML=c.im.map(([id,e],k)=>`<figure class="card" data-k="${k}"><div class="im"><img src="${U(id,e,'fill',1000,c.sq?1000:c.r43?750:667)}" alt="${c.c[k]}"></div><figcaption>${c.c[k]}<span>${pad(k+1)}</span></figcaption></figure>`).join('');
+ tr.scrollLeft=0;upd();tr.querySelectorAll('.card').forEach(f=>f.onclick=()=>{if(!moved)open(+f.dataset.k)})}
+tr.addEventListener('scroll',upd);$('prev').onclick=()=>tr.scrollBy({left:-gap(),behavior:'smooth'});$('next').onclick=()=>tr.scrollBy({left:gap(),behavior:'smooth'});
+let down=false,sx=0,sl=0;tr.onmousedown=e=>{down=true;moved=false;sx=e.pageX;sl=tr.scrollLeft;tr.style.scrollSnapType='none'};
+addEventListener('mouseup',()=>{if(down){down=false;tr.style.scrollSnapType='';const w=gap();tr.scrollTo({left:Math.round(tr.scrollLeft/w)*w,behavior:'smooth'})}});
+tr.onmousemove=e=>{if(!down)return;const dx=e.pageX-sx;if(Math.abs(dx)>5)moved=true;tr.scrollLeft=sl-dx};
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>show(+b.dataset.i));
+const lb=$('lb'),lim=lb.querySelector('img');
+function open(k){li=k;const c=cats[cur],[id,e]=c.im[k];lim.removeAttribute('src');lim.src=U(id,e,'fit',1600,1600);$('lc').textContent=c.c[k]+'  ·  '+(k+1)+' / '+c.im.length;lb.classList.add('on')}
+const n=()=>cats[cur].im.length;$('lp').onclick=e=>{e.stopPropagation();open((li-1+n())%n())};$('ln').onclick=e=>{e.stopPropagation();open((li+1)%n())};
+lb.onclick=e=>{if(e.target===lb||e.target.id=='lx')lb.classList.remove('on')};
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key=='Escape')lb.classList.remove('on');if(e.key=='ArrowRight')$('ln').click();if(e.key=='ArrowLeft')$('lp').click()});
+let tx=0;lb.ontouchstart=e=>tx=e.touches[0].clientX;lb.ontouchend=e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)(dx<0?$('ln'):$('lp')).click()};
+const tog=o=>document.body.classList.toggle('mo',o);$('hb').onclick=()=>tog(!document.body.classList.contains('mo'));
+document.querySelectorAll('#mm a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{tog(false);if(a.dataset.i)show(+a.dataset.i)}));
+const tt=$('totop'),f=()=>tt.classList.toggle('show',scrollY>600);addEventListener('scroll',f);tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+show(0);
+</script></body></html>
