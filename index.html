@@ -16,7 +16,7 @@ header{position:sticky;top:0;z-index:30;background:rgba(244,239,231,.9);backdrop
 h1{font-size:76px;line-height:1.05;font-weight:700;letter-spacing:-.02em;margin-bottom:22px}h1 em{font-style:normal;color:var(--acc)}
 h2{font-size:44px;line-height:1.1;font-weight:700;letter-spacing:-.02em}
 .heroBg{background:radial-gradient(900px 500px at 85% 30%,#E6D3B3 0%,rgba(244,239,231,0) 70%),var(--bg)}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:88px;padding-bottom:72px}
+.hero{display:grid;grid-template-columns:1fr;gap:56px;align-items:center;padding-top:88px;padding-bottom:72px}
 .lead{font-size:19px;color:var(--muted);max-width:520px;margin-bottom:34px}.ctas{display:flex;gap:12px;flex-wrap:wrap}
 .portrait{aspect-ratio:1/1;border-radius:28px;background:linear-gradient(150deg,#EADBC2,#C9AE82);box-shadow:0 30px 60px -30px rgba(120,90,40,.45);display:grid;place-items:center;overflow:hidden}.portrait img{width:88%}
 .band{background:var(--dark)}.services{display:grid;grid-template-columns:repeat(4,1fr)}
@@ -87,7 +87,7 @@ footer .wrap{flex-direction:column;gap:6px;text-align:center}
 <div class="heroBg"><div class="wrap hero"><div><div class="eyebrow">Graphic Designer</div><h1>Idan<br>Morhaim<em>.</em></h1>
 <p class="lead">Branding, marketing materials, product labels and user guides, designed with precision and delivered on schedule.</p>
 <div class="ctas"><a class="btn solid" href="#work">View my work →</a><a class="btn ghost" href="#contact">Contact me</a></div></div>
-<div class="portrait"><img id="pimg" alt="Idan Morhaim"></div></div></div>
+</div></div>
 <div class="band"><div class="wrap services"><div><small>01</small>Brand identity</div><div><small>02</small>Print &amp; marketing</div><div><small>03</small>User guides &amp; illustration</div><div><small>04</small>Labels &amp; packaging</div></div></div>
 <section id="work"><div class="wrap"><div class="eyebrow">Portfolio</div><h2>Selected work</h2><div class="tabs" id="tabs"></div>
 <div class="pinfo"><div><h3 id="pt"></h3><p id="pd"></p></div><div class="ctrl"><span class="ctr" id="ctr"></span><div><button class="arr" id="prev" aria-label="Previous">←</button> <button class="arr" id="next" aria-label="Next">→</button></div></div></div>
@@ -117,7 +117,7 @@ const cats=[
  im:P('a53bca779336463087f8113d71c42521.png 7147f672135c4b04a5c97fbede989907.png 933af602d8934c1981bd19578c16e3db.png e1ea67108d064a78b24bb95b1cde14a9.png 510f12dc745444c496c4f6e727a8a557.png 6adfd6e918de4dbebb4c7287ba6f73b4.jpg 6215b3a3b12c4ac4a7de7227f56f7cad.jpg 49c71990bff84fa085478092190da97b.png d95af5af8a524a609e0f34e8ddc19187.png'),
  c:['Mivne Group · Ahuza project roll-up','Physio Balance · Voucher flyer','Mayasurf · Bus-stop poster','RE/MAX · Recruitment flyers','Greeting card','Framed price list','Roll-up banners','Bat Yam Municipality · Booklet','Price list poster']}];
 const $=id=>document.getElementById(id),tr=$('track'),pad=n=>String(n).padStart(2,'0');let cur=0,li=0,moved=false;
-$('pimg').src=U('9974d3ec7aea40e1b05986094d571cc3','png','fit',900,900);
+
 $('tabs').innerHTML=cats.map((c,i)=>`<button data-i="${i}">${c.tab}<i>${c.im.length}</i></button>`).join('');
 $('msub').innerHTML=cats.map((c,i)=>`<a href="#work" data-i="${i}">${c.tab}<span>${c.im.length}</span></a>`).join('');
 const gap=()=>tr.children[0].offsetWidth+parseFloat(getComputedStyle(tr).gap);
