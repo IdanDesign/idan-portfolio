@@ -52,6 +52,13 @@ footer{background:var(--dark);color:#77736C;font-size:13px;border-top:1px solid 
 #lb img{max-width:100%;max-height:86vh;border-radius:10px}#lb b{position:absolute;top:16px;right:24px;color:#fff;font-size:32px;cursor:pointer;font-weight:400}
 #lb button{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:24px;cursor:pointer}
 #lp{left:20px}#ln{right:20px}#lc{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#ccc;font-size:14px}
+.track.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px;overflow:visible;scroll-snap-type:none;cursor:default;padding:0;margin:0}
+.hidegrid .ctrl,.hidegrid .bar{display:none}.hidegrid .pinfo{margin-bottom:30px}
+.bt{position:relative;border-radius:18px;overflow:hidden;background:#2A2722;cursor:zoom-in}.bt.L{grid-column:span 2;grid-row:span 2}.bt.W{grid-column:span 2}
+.bt img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}.bt:hover img{transform:scale(1.04)}
+.bt.zoom img,.bt.zoom:hover img{transform:scale(1.5);transform-origin:60% 70%}
+.bt-cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(10,10,10,.82));display:flex;flex-direction:column;gap:2px;opacity:0;transform:translateY(6px);transition:.3s}.bt:hover .bt-cap{opacity:1;transform:none}
+.bt-cap b{font-size:15px;font-weight:600;color:#fff}.bt-cap span{font-size:12px;color:var(--acc2);letter-spacing:.08em;text-transform:uppercase}
 #totop{position:fixed;right:24px;bottom:24px;z-index:40;width:52px;height:52px;border-radius:50%;border:0;background:var(--acc);color:#fff;font:600 22px Poppins;cursor:pointer;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);opacity:0;transform:translateY(12px);pointer-events:none;transition:.25s}
 #totop.show{opacity:1;transform:none;pointer-events:auto}.mo #totop{opacity:0;pointer-events:none}#totop:hover{background:var(--ink)}
 #hb{display:none;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;position:relative}
@@ -77,6 +84,8 @@ section{padding:64px 0}h2{font-size:34px}
 .ab-head{margin-bottom:24px}.ab-head h2{font-size:29px;line-height:1.2;letter-spacing:-.025em}.ab-cols{grid-template-columns:1fr;gap:16px;padding-top:24px}.ab-cols p{font-size:16px}
 .contact{padding:80px 0}.contact h2{font-size:38px}.contact p{font-size:16px}.contact .btn{flex:1 1 100%;justify-content:center}
 footer .wrap{flex-direction:column;gap:6px;text-align:center}
+.track.bento{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px;padding:0;margin:0}.bt{border-radius:14px}
+.bt-cap{opacity:1;transform:none;padding:24px 10px 8px}.bt-cap b{font-size:12px}.bt-cap span{font-size:10px}
 #totop{right:16px;bottom:16px;width:46px;height:46px;font-size:20px}#lb button{width:42px;height:42px;font-size:18px}#lp{left:8px}#ln{right:8px}}
 </style></head><body>
 <header><div class="wrap nav"><a href="#top" class="logo">IDAN MORHAIM<span>.</span></a>
@@ -106,9 +115,11 @@ footer .wrap{flex-direction:column;gap:6px;text-align:center}
 const U=(i,e,m,w,h)=>`https://static.wixstatic.com/media/a9d377_${i}~mv2.${e}/v1/${m}/w_${w},h_${h},al_c,q_85,enc_auto/x.${e}`;
 const P=s=>s.split(' ').map(x=>x.split('.'));
 const cats=[
-{tab:'User Guides',t:'User Guides & Illustrations',d:'Instruction manuals, technical illustrations and packaging for Doona products.',sq:0,r43:1,
- im:P('d8233f9dfc574af2af78ba424a9e7a39.png 785968386f0844859de65dabd9ae8765.png 31cad50383bf4c739ac5de3f3bf8ed25.png e58bb6f45ab94eaea49f8a3a12c3a824.png 79db5543889048a8bb2e9a16c82c3aec.png b8e8bbacc99440ac8f23d61704efc0da.png 44db85e921d848faae13eb46cd1f8fc2.png 6ea359b0b0b04ace95c46099d4378e4f.png 0566b7910469411f92cb96e53c523d4b.png'),
- c:['Doona X · User guide','Doona X · Guide spread','Doona X · Overview','Doona X · Instructions','Doona Base · User guide','Doona Base · Guide spread','Doona Base · Instructions','Doona · Packaging','Doona · Packaging']},
+{tab:'User Guides',t:'User Guides & Illustrations',d:'Instruction manuals and technical illustrations for Doona products.',sq:0,r43:1,
+ im:P('d8233f9dfc574af2af78ba424a9e7a39.png 785968386f0844859de65dabd9ae8765.png 31cad50383bf4c739ac5de3f3bf8ed25.png e58bb6f45ab94eaea49f8a3a12c3a824.png 79db5543889048a8bb2e9a16c82c3aec.png b8e8bbacc99440ac8f23d61704efc0da.png 44db85e921d848faae13eb46cd1f8fc2.png'),
+ c:['Doona X · User guide','Doona X · Guide spread','Doona X · Overview','Doona X · Instructions','Doona Base · User guide','Doona Base · Guide spread','Doona Base · Instructions']},
+{tab:'Packaging',t:'Packaging',d:'Product packaging design for Doona.',sq:0,
+ im:P('6ea359b0b0b04ace95c46099d4378e4f.png 0566b7910469411f92cb96e53c523d4b.png'),c:['Doona · Packaging','Doona · Packaging']},
 {tab:'Labels',t:'Stickers & Textile Labels',d:'Product stickers and textile labels for Doona X (US).',sq:1,
  im:P('3df30e73d7a14cd3a74f56cd1326663c.png 364faa1ad2334a1997d58b62449fb229.png c236b76e41084411bc346db7f60e0698.png'),c:['Doona X · Stroller side','Doona X · Lay back','Doona X · Car seat']},
 {tab:'Business Cards',t:'Business Cards',d:'Card designs for law firms, salons, real estate, beauty and tech brands, including embossed finishes.',sq:0,
@@ -117,13 +128,20 @@ const cats=[
 {tab:'Print & Marketing',t:'Print & Marketing Materials',d:'Roll-ups, flyers, signage, menus, posters and booklets.',sq:1,
  im:P('a53bca779336463087f8113d71c42521.png 7147f672135c4b04a5c97fbede989907.png 933af602d8934c1981bd19578c16e3db.png e1ea67108d064a78b24bb95b1cde14a9.png 510f12dc745444c496c4f6e727a8a557.png 6adfd6e918de4dbebb4c7287ba6f73b4.jpg 6215b3a3b12c4ac4a7de7227f56f7cad.jpg 49c71990bff84fa085478092190da97b.png d95af5af8a524a609e0f34e8ddc19187.png'),
  c:['Mivne Group · Ahuza project roll-up','Physio Balance · Voucher flyer','Mayasurf · Bus-stop poster','RE/MAX · Recruitment flyers','Greeting card','Framed price list','Roll-up banners','Bat Yam Municipality · Booklet','Price list poster']}];
+const picks=[[4,7],[0,1],[2,2],[3,5],[3,3],[4,2],[3,2],[1,0]];
+const bsz=['L','S','S','W','W','L','S','S'];
+cats.unshift({tab:'Highlights',t:'Highlights',d:'A selection from every category. Pick a tab above for the full set.',bento:1,zoom:[1],pos:{2:'50% 65%'},
+ im:picks.map(([a,b])=>cats[a].im[b]),c:picks.map(([a,b])=>cats[a].c[b]),tag:picks.map(([a])=>cats[a].tab),sz:bsz});
 const $=id=>document.getElementById(id),tr=$('track'),pad=n=>String(n).padStart(2,'0');let cur=0,li=0,moved=false;
 
 $('tabs').innerHTML=cats.map((c,i)=>`<button data-i="${i}">${c.tab}<i>${c.im.length}</i></button>`).join('');
 $('msub').innerHTML=cats.map((c,i)=>`<a href="#work" data-i="${i}">${c.tab}<span>${c.im.length}</span></a>`).join('');
 const gap=()=>tr.children[0].offsetWidth+parseFloat(getComputedStyle(tr).gap);
 function upd(){const n=tr.children.length,idx=Math.min(n-1,Math.round(tr.scrollLeft/gap()));$('ctr').innerHTML=`<b>${pad(idx+1)}</b> / ${pad(n)}`;const max=tr.scrollWidth-tr.clientWidth;$('bar').style.width=(max>0?Math.max(8,tr.scrollLeft/max*100):100)+'%'}
-function show(i){cur=i;const c=cats[i];document.querySelectorAll('#tabs button').forEach((b,k)=>b.classList.toggle('on',k==i));$('pt').textContent=c.t;$('pd').textContent=c.d;tr.classList.toggle('sq',!!c.sq);tr.classList.toggle('r43',!!c.r43);
+function show(i){cur=i;const c=cats[i];document.querySelectorAll('#tabs button').forEach((b,k)=>b.classList.toggle('on',k==i));$('pt').textContent=c.t;$('pd').textContent=c.d;tr.classList.toggle('sq',!!c.sq);tr.classList.toggle('r43',!!c.r43);tr.classList.toggle('bento',!!c.bento);$('work').classList.toggle('hidegrid',!!c.bento);
+ if(c.bento){tr.innerHTML=c.im.map(([id,e],k)=>`<figure class="bt ${c.sz[k]}${c.zoom.includes(k)?' zoom':''}" data-k="${k}"><img src="${c.pos[k]?U(id,e,'fit',1200,1200):U(id,e,'fill',1200,900)}"${c.pos[k]?` style="object-position:${c.pos[k]}"`:''} alt="${c.c[k]}"><figcaption class="bt-cap"><b>${c.c[k]}</b><span>${c.tag[k]}</span></figcaption></figure>`).join('');
+  tr.querySelectorAll('.bt').forEach(f=>f.onclick=()=>open(+f.dataset.k));
+  return}
  tr.innerHTML=c.im.map(([id,e],k)=>`<figure class="card" data-k="${k}"><div class="im"><img src="${U(id,e,'fill',1000,c.sq?1000:c.r43?750:667)}" alt="${c.c[k]}"></div><figcaption>${c.c[k]}<span>${pad(k+1)}</span></figcaption></figure>`).join('');
  tr.scrollLeft=0;upd();tr.querySelectorAll('.card').forEach(f=>f.onclick=()=>{if(!moved)open(+f.dataset.k)})}
 tr.addEventListener('scroll',upd);$('prev').onclick=()=>tr.scrollBy({left:-gap(),behavior:'smooth'});$('next').onclick=()=>tr.scrollBy({left:gap(),behavior:'smooth'});
